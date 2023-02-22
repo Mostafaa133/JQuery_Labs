@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>TO DO LIST</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> -->
+    <style>
+        body{
+            background-color:lightgray;
+        }
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    justify-items: center;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    justify-items: center;
+    width: 100%;
+    height: 25%;
+}
+
+.add , .addtask{
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: center;
+    padding-bottom: 15px;
+}
+
+.header p{
+    font-size: 24px;
+    font-weight: bold;
+    color: #ca1414;
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 15px;
+}
+
+#addBtn{
+    color: black;
+    background-color: white;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 8px;
+    margin-left: 30px;
+    border-radius: 45%;
+    transition: all .2s;
+}
+#task{
+    padding-top: 10px;
+}
+.header input , .taskinput{
+    height: 40px;
+    width: 250px;
+    border-radius: 35px;
+    padding: 12px;
+    font-size: 19px;
+}
+.taskinput{
+    background-color: lightgrey;
+    color: black;
+}
+.taskinput:hover{
+    cursor: pointer;
+}
+.marked{
+    background-color: rgb(0, 255, 98);
+    opacity: .8;
+    text-decoration: line-through;
+    color: black;
+}
+.btnDel{
+    background-color: white;
+    color: black;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 8px;
+    border-radius: 40%;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="header">
+
+            <p>ToDo List</p>
+            <div class="add">
+                <input type="text" placeholder="Add Your task here" id="maininput">
+                <span id="addBtn">Add</span>
+            </div>
+
+        </div>
+
+        <div id="task"></div>
+
+    </div>
+    <script src='task1.js'></script>
+</body>
+</html>
